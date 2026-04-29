@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şehrim - Tokat | Portföy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-person-circle me-2"></i>Portföyüm</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sehrim.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2 px-3" href="login.html">Giriş</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <div class="page-header text-white text-center d-flex align-items-center justify-content-center">
+        <div>
+            <h1 class="display-5 fw-bold"><i class="bi bi-geo-alt-fill me-3"></i>Şehrim: Tokat</h1>
+            <p class="lead">"Tarihin ve Doğanın Buluştuğu Şehir"</p>
+        </div>
+    </div>
+
+    <!-- SLIDER (5 FOTOĞRAF) -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h2 class="section-title text-white text-center mb-4">Tokat'tan Kareler</h2>
+            <div id="sehirSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#sehirSlider" data-bs-slide-to="4"></button>
+                </div>
+                <div class="carousel-inner rounded-4 overflow-hidden shadow-lg">
+
+                    <!-- SLAYT 1 -->
+                    <div class="carousel-item active">
+                        <a href="images/tokatkalesi.webp" target="_blank">
+                            <img src="images/tokatkalesi.webp" class="d-block w-100 slider-img" alt="Tokat Kalesi"
+                                onerror="this.src='https://picsum.photos/1200/500?random=10'">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Tokat Kalesi</h5>
+                            <p>Şehre hâkim tarihi kale — yüzyıllarca koruma altında bir şehrin simgesi</p>
+                        </div>
+                    </div>
+
+                    <!-- SLAYT 2 -->
+                    <div class="carousel-item">
+                        <a href="images/Taşhan.jpg" target="_blank">
+                            <img src="images/Taşhan.jpg" class="d-block w-100 slider-img" alt="Taşhan"
+                                onerror="this.src='https://picsum.photos/1200/500?random=11'">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Taşhan</h5>
+                            <p>Anadolu'da bulunan en büyük tarihi han</p>
+                        </div>
+                    </div>
+
+                    <!-- SLAYT 3 -->
+                    <div class="carousel-item">
+                        <a href="images/Ballıca.jpg" target="_blank">
+                            <img src="images/Ballıca.jpg" class="d-block w-100 slider-img" alt="Ballıca Mağarası"
+                                onerror="this.src='https://picsum.photos/1200/500?random=12'">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Ballıca Mağarası</h5>
+                            <p>Dünyada astıma iyi gelen sayılı turistik mağaralardan biri</p>
+                        </div>
+                    </div>
+
+                    <!-- SLAYT 4 -->
+                    <div class="carousel-item">
+                        <a href="images/Yağıbasan.jpg" target="_blank">
+                            <img src="images/Yağıbasan.jpg" class="d-block w-100 slider-img" alt="Yağıbasan Medresesi"
+                                onerror="this.src='https://picsum.photos/1200/500?random=13'">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Yağıbasan Medresesi</h5>
+                            <p>Anadolu'nun ilme açılan ilk kapısı</p>
+                        </div>
+                    </div>
+
+                    <!-- SLAYT 5 -->
+                    <div class="carousel-item">
+                        <a href="images/Saatkulesi.jpg" target="_blank">
+                            <img src="images/Saatkulesi.jpg" class="d-block w-100 slider-img" alt="Saat Kulesi"
+                                onerror="this.src='https://picsum.photos/1200/500?random=14'">
+                        </a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Saat Kulesi</h5>
+                            <p>Zamanın Tokat’ta asılı kaldığı o yer</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#sehirSlider" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Önceki</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#sehirSlider" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Sonraki</span>
+                </button>
+            </div>
+
+            <!-- THUMBNAIL NAVIGASYON -->
+            <div class="row g-2 mt-3" id="sliderThumbs">
+                <div class="col">
+                    <img src="images/tokatkalesi.webp" class="img-fluid rounded cursor-pointer slider-thumb active"
+                        onclick="goToSlide(0)" alt="Tokat Kalesi"
+                        onerror="this.src='https://picsum.photos/200/100?random=10'">
+                </div>
+                <div class="col">
+                    <img src="images/Taşhan.jpg" class="img-fluid rounded cursor-pointer slider-thumb"
+                        onclick="goToSlide(1)" alt="Taşhan"
+                        onerror="this.src='https://picsum.photos/200/100?random=11'">
+                </div>
+                <div class="col">
+                    <img src="images/Ballıca.jpg" class="img-fluid rounded cursor-pointer slider-thumb"
+                        onclick="goToSlide(2)" alt="Ballıca"
+                        onerror="this.src='https://picsum.photos/200/100?random=12'">
+                </div>
+                <div class="col">
+                    <img src="images/Yağıbasan.jpg" class="img-fluid rounded cursor-pointer slider-thumb"
+                        onclick="goToSlide(3)" alt="Yağıbasan Medresesi"
+                        onerror="this.src='https://picsum.photos/200/100?random=13'">
+                </div>
+                <div class="col">
+                    <img src="images/Saatkulesi.jpg" class="img-fluid rounded cursor-pointer slider-thumb"
+                        onclick="goToSlide(4)" alt="Saat Kulesi"
+                        onerror="this.src='https://picsum.photos/200/100?random=14'">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ŞEHİR İSTATİSTİKLERİ -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Tokat Hakkında</h2>
+            <div class="row g-4 mb-5">
+                <div class="col-md-3 col-6">
+                    <div class="istatistik-kart text-center p-4 rounded-3 bg-primary text-white shadow">
+                        <i class="bi bi-people-fill fs-2 mb-2"></i>
+                        <h3 class="fw-bold">614 B+</h3>
+                        <p class="mb-0 small">Nüfus (2026)</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="istatistik-kart text-center p-4 rounded-3 bg-success text-white shadow">
+                        <i class="bi bi-map-fill fs-2 mb-2"></i>
+                        <h3 class="fw-bold">10.042 km²</h3>
+                        <p class="mb-0 small">Yüzölçümü</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="istatistik-kart text-center p-4 rounded-3 bg-warning text-white shadow">
+                        <i class="bi bi-building-fill fs-2 mb-2"></i>
+                        <h3 class="fw-bold">12</h3>
+                        <p class="mb-0 small">İlçe</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="istatistik-kart text-center p-4 rounded-3 bg-danger text-white shadow">
+                        <i class="bi bi-calendar-fill fs-2 mb-2"></i>
+                        <h3 class="fw-bold">~M.Ö. 3000</h3>
+                        <p class="mb-0 small">Kuruluş</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TANITIM YAZI + HARİTA -->
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">Tokat'ı Tanıyalım</h3>
+                    <p class="text-muted">
+                        Tokat, Karadeniz Bölgesi'nin İç Anadolu'ya geçiş kuşağında yer alan, köklü tarihi
+                        ve zengin kültürüyle öne çıkan bir şehirdir. Hitit, Frig, Pers, Roma, Bizans,
+                        Selçuklu ve Osmanlı uygarlıklarına ev sahipliği yapmıştır.
+                    </p>
+                    <p class="text-muted">
+                        Yeşilırmak Nehri vadisinde kurulu olan şehir; el dokuması halıları, bakırcılığı,
+                        Tokat bezi ve şarabıyla tarih boyunca ün kazanmıştır. Tarihi İpek Yolu güzergâhında
+                        bulunan Tokat, bu konumuyla ticarette de önemli bir merkez olmuştur.
+                    </p>
+                    <p class="text-muted">
+                        <strong>Julius Caesar'ın "Veni, Vidi, Vici" (Geldim, Gördüm, Yendim)</strong>
+                        sözünü Pontus Kralı'na karşı kazandığı zaferden sonra söylediği rivayet edilen
+                        Zela (bugünkü Zile) de Tokat iline bağlıdır.
+                    </p>
+                    <div class="row g-2 mt-3">
+                        <div class="col-auto">
+                            <span class="badge bg-primary px-3 py-2">
+                                <i class="bi bi-geo me-1"></i>Karadeniz Bölgesi
+                            </span>
+                        </div>
+                        <div class="col-auto">
+                            <span class="badge bg-success px-3 py-2">
+                                <i class="bi bi-droplet me-1"></i>Yeşilırmak Kıyısı
+                            </span>
+                        </div>
+                        <div class="col-auto">
+                            <span class="badge bg-warning px-3 py-2">
+                                <i class="bi bi-building me-1"></i>İpek Yolu Üzerinde
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ratio ratio-4x3 rounded-3 overflow-hidden shadow">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d192000!2d36.5547!3d40.3167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x407880f5b6a3fd0b%3A0x6d8e5b7f7c0a1234!2sTokat!5e0!3m2!1str!2str!4v1234567890"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GEZİLECEK YERLER -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Gezilecek Yerler</h2>
+            <div class="row g-4">
+
+                <!-- TOKAT KALESİ -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <img src="images/tokatkalesi.webp" class="card-img-top" style="height:200px; object-fit:cover;"
+                            alt="Tokat Kalesi" onerror="this.src='https://picsum.photos/400/200?random=20'">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-danger me-2">Tarihi</span>
+                                <span class="text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Tokat Kalesi</h5>
+                            <p class="card-text text-muted small">
+                                Şehrin tepesinde yer alan kale, Romalılar dönemine kadar uzanan
+                                köklü bir tarihe sahiptir. Kaleden şehrin tüm panoramasını izlemek
+                                mümkündür. Akşam aydınlatmasıyla muhteşem bir manzara sunar.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small mt-2">
+                                <i class="bi bi-geo-alt text-danger me-1"></i>
+                                Merkez, Tokat
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BALLICA MAĞARASI -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <img src="images/Ballıca.jpg" class="card-img-top" style="height:200px; object-fit:cover;"
+                            alt="Ballıca Mağarası" onerror="this.src='https://picsum.photos/400/200?random=21'">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-info me-2">Doğa</span>
+                                <span class="text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Ballıca Mağarası</h5>
+                            <p class="card-text text-muted small">
+                                Pazar ilçesinde bulunan bu mağara, 680 metre uzunluğu ve
+                                iç mekânındaki sarkıt-dikit oluşumlarıyla dünyanın en
+                                önemli turistik mağaralarından biridir.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small mt-2">
+                                <i class="bi bi-geo-alt text-danger me-1"></i>
+                                Pazar, Tokat
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ALİ PAŞA HAMAMI -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <img src="images/alipaşahamamı.jpg" class="card-img-top" style="height:200px; object-fit:cover;"
+                            alt="Ali Paşa Hamamı" onerror="this.src='https://picsum.photos/400/200?random=22'">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-warning text-dark me-2">Kültür</span>
+                                <span class="text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Ali Paşa Hamamı</h5>
+                            <p class="card-text text-muted small">
+                                16. yüzyıldan kalma Osmanlı eseri olan hamam, tarihi çarşı
+                                içinde yer almaktadır. Mimari detaylarıyla ziyaretçilere
+                                Osmanlı geleneğini yaşatmaktadır.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small mt-2">
+                                <i class="bi bi-geo-alt text-danger me-1"></i>
+                                Merkez, Tokat
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LEYLEKLİ KÖPRÜ -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <img src="images/leylekliköprü.jpg" class="card-img-top" style="height:200px; object-fit:cover;"
+                            alt="Leylekli Köprü" onerror="this.src='https://picsum.photos/400/200?random=23'">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-dark me-2">Tarih</span>
+                                <span class="text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Leylekli Köprü</h5>
+                            <p class="card-text text-muted small">
+                                Niksar’ın tarihi dokusunu en zarif şekilde yansıtan Leylekli Köprü, Çanakçı Deresi
+                                üzerinde yükselen ve Roma veya Bizans dönemine ait olduğu düşünülen kadim bir yapıdır.
+                                Tek kemerli ve yarım daire formundaki mimarisi, antik mühendislik becerisinin günümüze
+                                ulaşan en sağlam örneklerinden biri olarak kabul edilir
+                            </p>
+                            <div class="d-flex align-items-center text-muted small mt-2">
+                                <i class="bi bi-geo-alt text-danger me-1"></i>
+                                Niksar, Tokat
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAŞKÖPRÜ-->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <img src="images/taşköprü.jpg
+                        " class="card-img-top" style="height:200px; object-fit:cover;" alt="Taşköprü"
+                            onerror="this.src='https://picsum.photos/400/200?random=24'">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-secondary me-2">Antik</span>
+                                <span class="text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Taşköprü</h5>
+                            <p class="card-text text-muted small">
+                                Tokat’ın simge yapılarından biri olan Taşköprü, Yeşilırmak üzerinde tüm heybetiyle
+                                yükselen ve Selçuklu mimarisinin inceliklerini taşıyan tarihi bir eserdir. 1250 yılında
+                                inşa edilen bu kadim köprü, yaklaşık 151 metre uzunluğu ve kesme taş işçiliğiyle şehrin
+                                geçmişini bugüne bağlayan bir zaman tüneli gibidir. Üzerindeki kemerli yapısı ve sağlam
+                                temelleri sayesinde asırlardır hem doğal afetlere hem de yoğun kullanıma karşı direnerek
+                                orijinalliğini büyük ölçüde korumuştur.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small mt-2">
+                                <i class="bi bi-geo-alt text-danger me-1"></i>
+                                Merkez, Tokat
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YEŞİLIRMAK -->
+                <div class="col-md-4">
+                    <div class="card border-0 shadow-sm h-100 card-hover">
+                        <img src="images/yeşilırmak.jpg" class="card-img-top" style="height:200px; object-fit:cover;"
+                            alt="Yeşilırmak" onerror="this.src='https://picsum.photos/400/200?random=25'">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center mb-2">
+                                <span class="badge bg-success me-2">Doğa</span>
+                                <span class="text-warning small">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-half"></i>
+                                </span>
+                            </div>
+                            <h5 class="card-title fw-bold">Yeşilırmak Vadisi</h5>
+                            <p class="card-text text-muted small">
+                                Sivas’ın iç kesimlerinden doğup Karadeniz’e dökülen Yeşilırmak, Tokat şehrinin
+                                ortasından geçerek kente hayat veren ve coğrafi kimliğini belirleyen en önemli doğal
+                                unsurdur. Nehrin şehir merkezindeki bölümü, çevresindeki yürüyüş yolları, parklar ve
+                                sosyal tesislerle Tokat halkı için eşsiz bir dinlenme ve nefes alma alanı oluşturur.
+                            </p>
+                            <div class="d-flex align-items-center text-muted small mt-2">
+                                <i class="bi bi-geo-alt text-danger me-1"></i>
+                                Tokat Geneli
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TOKAT'IN LEZZETLERI -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Tokat'ın Lezzetleri</h2>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-md-3 col-6">
+                    <div class="text-center p-4 rounded-3 shadow-sm bg-white h-100 card-hover">
+                        <div class="fs-1 mb-3">🥩</div>
+                        <h6 class="fw-bold">Tokat Kebabı</h6>
+                        <p class="text-muted small mb-0">
+                            Tokat'a özgü, sebzeli ve şiş üzerinde pişirilen meşhur kebap
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="text-center p-4 rounded-3 shadow-sm bg-white h-100 card-hover">
+                        <div class="fs-1 mb-3">🍀</div>
+                        <h6 class="fw-bold">Tokat Bağ Yaprağı </h6>
+                        <p class="text-muted small mb-0">
+                            Tarihi bağlardan elde edilen; ince ve zarif üzüm yaprakları
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="text-center p-4 rounded-3 shadow-sm bg-white h-100 card-hover">
+                        <div class="fs-1 mb-3">🍲</div>
+                        <h6 class="fw-bold">Helle Çorbası</h6>
+                        <p class="text-muted small mb-0">
+                            Su ve unun birleşimiyle hazırlanan; şifalı ve lezzetli, Tokat'a özgü geleneksel yöresel
+                            çorba
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-3 col-6">
+                    <div class="text-center p-4 rounded-3 shadow-sm bg-white h-100 card-hover">
+                        <div class="fs-1 mb-3">🥗</div>
+                        <h6 class="fw-bold">Cevizli Bat</h6>
+                        <p class="text-muted small mb-0">
+                            Ceviz, mercimek, domates gibi malzemelerle hazırlanan, Tokat mutfağının eşsiz lezzetlerinden
+                            biri olan günlerin vazgeçilmezi yöresel bir meze
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TOKAT'IN İLÇELERİ -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">İlçeler</h2>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-building text-primary fs-4"></i>
+                        <div class="fw-medium mt-2 small">Merkez</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-bank text-success fs-4"></i>
+                        <div class="fw-medium mt-2 small">Niksar</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-flag text-danger fs-4"></i>
+                        <div class="fw-medium mt-2 small">Zile</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-tree text-warning fs-4"></i>
+                        <div class="fw-medium mt-2 small">Turhal</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-water text-info fs-4"></i>
+                        <div class="fw-medium mt-2 small">Erbaa</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-geo text-secondary fs-4"></i>
+                        <div class="fw-medium mt-2 small">Artova</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-droplet text-primary fs-4"></i>
+                        <div class="fw-medium mt-2 small">Almus</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-flower1 text-success fs-4"></i>
+                        <div class="fw-medium mt-2 small">Başçiftlik</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-minecart-loaded text-warning fs-4"></i>
+                        <div class="fw-medium mt-2 small">Pazar</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-tree-fill text-success fs-4"></i>
+                        <div class="fw-medium mt-2 small">Reşadiye</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-thermometer-sun text-danger fs-4"></i>
+                        <div class="fw-medium mt-2 small">Sulusaray</div>
+                    </div>
+                </div>
+                <div class="col-md-2 col-4">
+                    <div class="text-center p-3 rounded-3 bg-white shadow-sm card-hover h-100">
+                        <i class="bi bi-globe text-info fs-4"></i>
+                        <div class="fw-medium mt-2 small">Yeşilyurt</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2026 Buğrahan AKIN — İbnü'l Vakt 🏔️</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://github.com/" target="_blank" class="text-white fs-5"><i class="bi bi-github"></i></a>
+                <a href="iletisim.html" class="text-white fs-5"><i class="bi bi-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
