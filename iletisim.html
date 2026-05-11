@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Portföy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-person-circle me-2"></i>Portföyüm
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkımda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sehrim.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="mirasimiz.html">Mirasımız</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ilgi-alanlarim.html">İlgi Alanlarım</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="iletisim.html">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-outline-light ms-2 px-3" href="login.html">Giriş</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-header text-white text-center d-flex align-items-center justify-content-center">
+        <div>
+            <h1 class="display-5 fw-bold"><i class="bi bi-envelope-fill me-3"></i>İletişim</h1>
+            <p class="lead">Benimle iletişime geçin</p>
+        </div>
+    </div>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- İLETİŞİM BİLGİLERİ -->
+                <div class="col-lg-4">
+                    <h4 class="fw-bold mb-4">İletişim Bilgilerim</h4>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="iletisim-ikon bg-primary text-white rounded-3 p-3 me-3 flex-shrink-0">
+                            <i class="bi bi-geo-alt-fill fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Adres</h6>
+                            <p class="text-muted mb-0">Sakarya Üniversitesi,<br>Serdivan / Sakarya</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="iletisim-ikon bg-success text-white rounded-3 p-3 me-3 flex-shrink-0">
+                            <i class="bi bi-envelope-fill fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">E-posta</h6>
+                            <p class="text-muted mb-0">bugrahan.akin@ogr.sakarya.edu.tr</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="iletisim-ikon bg-warning text-white rounded-3 p-3 me-3 flex-shrink-0">
+                            <i class="bi bi-telephone-fill fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">Telefon</h6>
+                            <p class="text-muted mb-0">+90 532 247 60 75</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <div class="iletisim-ikon bg-dark text-white rounded-3 p-3 me-3 flex-shrink-0">
+                            <i class="bi bi-github fs-5"></i>
+                        </div>
+                        <div>
+                            <h6 class="fw-bold mb-1">GitHub</h6>
+                            <a href="https://github.com/RusRussell54" target="_blank"
+                                class="text-muted">github.com/RusRussell54</a>
+                        </div>
+                    </div>
+
+                    <!-- FORM DENETLEME AÇIKLAMASI -->
+                    <div class="mt-5 p-4 bg-light rounded-3 border">
+                        <h6 class="fw-bold mb-3">
+                            <i class="bi bi-info-circle text-primary me-2"></i>Form Denetleme
+                        </h6>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="badge bg-primary me-2">Buton 1</span>
+                            <small>Native JavaScript ile denetleme</small>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <span class="badge bg-success me-2">Buton 2</span>
+                            <small>Vue.js ile denetleme</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM -->
+                <div class="col-lg-8">
+                    <div id="iletisimApp">
+                        <div class="bg-white rounded-4 shadow-sm p-4 p-md-5">
+                            <h4 class="fw-bold mb-4">Mesaj Gönderin</h4>
+
+                            <!-- VUE MESAJ ALANI -->
+                            <div v-if="vueMesaj.text"
+                                :class="['alert', vueMesaj.tip === 'hata' ? 'alert-danger' : 'alert-success', 'mb-4']"
+                                role="alert">
+                                <i
+                                    :class="['bi me-2', vueMesaj.tip === 'hata' ? 'bi-exclamation-triangle' : 'bi-check-circle-fill']"></i>
+                                {{ vueMesaj.text }}
+                            </div>
+
+                            <form id="iletisimForm" action="php/iletisim-isle.php" method="POST" novalidate>
+
+                                <div class="row g-3">
+
+                                    <!-- AD -->
+                                    <div class="col-md-6">
+                                        <label for="ad" class="form-label fw-medium">
+                                            Ad <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="ad" name="ad" v-model="form.ad"
+                                            placeholder="Adınızı girin">
+                                        <div class="invalid-feedback" id="adHata"></div>
+                                        <div class="text-danger small mt-1" v-if="vueHatalar.ad">
+                                            {{ vueHatalar.ad }}
+                                        </div>
+                                    </div>
+
+                                    <!-- SOYAD -->
+                                    <div class="col-md-6">
+                                        <label for="soyad" class="form-label fw-medium">
+                                            Soyad <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="text" class="form-control" id="soyad" name="soyad"
+                                            v-model="form.soyad" placeholder="Soyadınızı girin">
+                                        <div class="invalid-feedback" id="soyadHata"></div>
+                                        <div class="text-danger small mt-1" v-if="vueHatalar.soyad">
+                                            {{ vueHatalar.soyad }}
+                                        </div>
+                                    </div>
+
+                                    <!-- E-POSTA -->
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label fw-medium">
+                                            E-posta <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            v-model="form.email" placeholder="ornek@email.com">
+                                        <div class="invalid-feedback" id="emailHata"></div>
+                                        <div class="text-danger small mt-1" v-if="vueHatalar.email">
+                                            {{ vueHatalar.email }}
+                                        </div>
+                                    </div>
+
+                                    <!-- TELEFON -->
+                                    <div class="col-md-6">
+                                        <label for="telefon" class="form-label fw-medium">
+                                            Telefon <span class="text-danger">*</span>
+                                        </label>
+                                        <input type="tel" class="form-control" id="telefon" name="telefon"
+                                            v-model="form.telefon" placeholder="05XXXXXXXXX">
+                                        <div class="invalid-feedback" id="telefonHata"></div>
+                                        <div class="text-danger small mt-1" v-if="vueHatalar.telefon">
+                                            {{ vueHatalar.telefon }}
+                                        </div>
+                                    </div>
+
+                                    <!-- KONU (select) -->
+                                    <div class="col-md-6">
+                                        <label for="konu" class="form-label fw-medium">
+                                            Konu <span class="text-danger">*</span>
+                                        </label>
+                                        <select class="form-select" id="konu" name="konu" v-model="form.konu">
+                                            <option value="">-- Konu Seçin --</option>
+                                            <option value="is-birligi">İş Birliği</option>
+                                            <option value="freelance">Freelance Proje</option>
+                                            <option value="staj">Staj Desteği</option>
+                                            <option value="teknik">Teknik Destek</option>
+                                            <option value="diger">Diğer</option>
+                                        </select>
+                                        <div class="invalid-feedback" id="konuHata"></div>
+                                        <div class="text-danger small mt-1" v-if="vueHatalar.konu">
+                                            {{ vueHatalar.konu }}
+                                        </div>
+                                    </div>
+
+                                    <!-- NASIL BULDUNUZ (select) -->
+                                    <div class="col-md-6">
+                                        <label for="bulusYolu" class="form-label fw-medium">
+                                            Nasıl Buldunuz?
+                                        </label>
+                                        <select class="form-select" id="bulusYolu" name="bulusYolu"
+                                            v-model="form.bulusYolu">
+                                            <option value="">-- Seçin --</option>
+                                            <option value="github">GitHub</option>
+                                            <option value="arkadas">Arkadaş Tavsiyesi</option>
+                                            <option value="diger">Diğer</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- İLETİŞİM TERCİHİ (radio) -->
+                                    <div class="col-12">
+                                        <label class="form-label fw-medium">
+                                            İletişim Tercihi <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="d-flex gap-4 flex-wrap">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="iletisimTercihi"
+                                                    id="tercihEmail" value="email" v-model="form.iletisimTercihi">
+                                                <label class="form-check-label" for="tercihEmail">
+                                                    <i class="bi bi-envelope me-1"></i>E-posta
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="iletisimTercihi"
+                                                    id="tercihTelefon" value="telefon" v-model="form.iletisimTercihi">
+                                                <label class="form-check-label" for="tercihTelefon">
+                                                    <i class="bi bi-telephone me-1"></i>Telefon
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="iletisimTercihi"
+                                                    id="tercihFark" value="fark-etmez" v-model="form.iletisimTercihi">
+                                                <label class="form-check-label" for="tercihFark">
+                                                    Fark Etmez
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="text-danger small mt-1" id="tercihHata"></div>
+                                        <div class="text-danger small mt-1" v-if="vueHatalar.iletisimTercihi">
+                                            {{ vueHatalar.iletisimTercihi }}
+                                        </div>
+                                    </div>
+
+                                    <!-- İLGİ ALANLARI (checkbox) -->
+                                    <div class="col-12">
+                                        <label class="form-label fw-medium">
+                                            İlgilendiğiniz Konular <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="row g-2">
+                                            <div class="col-md-4 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="ilgiAlanlari[]" id="webGelistirme" value="web-gelistirme"
+                                                        v-model="form.ilgiAlanlari">
+                                                    <label class="form-check-label" for="webGelistirme">
+                                                        Web Geliştirme
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="ilgiAlanlari[]" id="veritabani" value="veritabani"
+                                                        v-model="form.ilgiAlanlari">
+                                                    <label class="form-check-label" for="veritabani">
+                                                        Veritabanı
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="ilgiAlanlari[]" id="yapayZeka" value="yapay-zeka"
+                                                        v-model="form.ilgiAlanlari">
+                                                    <label class="form-check-label" for="yapayZeka">
+                                                        Yapay Zeka
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-6">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox"
+                                                        name="ilgiAlanlari[]" id="fotografcilik" value="fotografcilik"
+                                                        v-model="form.ilgiAlanlari">
+                                                    <label class="form-check-label" for="fotografcilik">
+                                                        Fotoğrafçılık
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="text-danger small mt-1" id="ilgiHata"></div>
+                                        <div class="text-danger small mt-1" v-if="vueHatalar.ilgiAlanlari">
+                                            {{ vueHatalar.ilgiAlanlari }}
+                                        </div>
+                                    </div>
+
+                                    <!-- YAŞ ARALIĞI (range) -->
+                                    <div class="col-md-6">
+                                        <label for="yasAraligi" class="form-label fw-medium">
+                                            Yaş Aralığı: <strong>{{ form.yas }}</strong>
+                                        </label>
+                                        <input type="range" class="form-range" id="yasAraligi" name="yasAraligi"
+                                            min="16" max="65" step="1" v-model="form.yas">
+                                        <div class="d-flex justify-content-between">
+                                            <small class="text-muted">16</small>
+                                            <small class="text-muted">65</small>
+                                        </div>
+                                    </div>
+
+                                    <!-- DOSYA (file) -->
+                                    <div class="col-md-6">
+                                        <label for="dosya" class="form-label fw-medium">
+                                            Dosya Ekle (isteğe bağlı)
+                                        </label>
+                                        <input type="file" class="form-control" id="dosya" name="dosya"
+                                            accept=".pdf,.doc,.docx,.jpg,.png">
+                                        <div class="form-text">PDF, DOC, JPG veya PNG (max 5MB)</div>
+                                    </div>
+
+                                    <!-- MESAJ (textarea) -->
+                                    <div class="col-12">
+                                        <label for="mesaj" class="form-label fw-medium">
+                                            Mesajınız <span class="text-danger">*</span>
+                                        </label>
+                                        <textarea class="form-control" id="mesaj" name="mesaj" rows="5"
+                                            v-model="form.mesaj" placeholder="Mesajınızı buraya yazın..."></textarea>
+                                        <div class="d-flex justify-content-between mt-1">
+                                            <div>
+                                                <div class="invalid-feedback" id="mesajHata"></div>
+                                                <div class="text-danger small" v-if="vueHatalar.mesaj">
+                                                    {{ vueHatalar.mesaj }}
+                                                </div>
+                                            </div>
+                                            <small class="text-muted">{{ form.mesaj.length }} karakter</small>
+                                        </div>
+                                    </div>
+
+                                    <!-- KVKK (checkbox) -->
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="kvkk" name="kvkk"
+                                                v-model="form.kvkk">
+                                            <label class="form-check-label" for="kvkk">
+                                                <a href="#" class="text-primary">KVKK Aydınlatma Metni</a>'ni
+                                                okudum ve kabul ediyorum. <span class="text-danger">*</span>
+                                            </label>
+                                        </div>
+                                        <div class="text-danger small mt-1" id="kvkkHata"></div>
+                                        <div class="text-danger small mt-1" v-if="vueHatalar.kvkk">
+                                            {{ vueHatalar.kvkk }}
+                                        </div>
+                                    </div>
+
+                                    <!-- BUTONLAR -->
+                                    <div class="col-12">
+                                        <div class="d-flex gap-3 flex-wrap">
+
+                                            <!-- BUTON 1: Native JS -->
+                                            <button type="button" class="btn btn-primary btn-lg px-5"
+                                                onclick="jsIleDogrula()">
+                                                <i class="bi bi-shield-check me-2"></i>
+                                                JS ile Doğrula & Gönder
+                                            </button>
+
+                                            <!-- BUTON 2: Vue.js -->
+                                            <button type="button" class="btn btn-success btn-lg px-5"
+                                                @click="vueIleDogrula">
+                                                <i class="bi bi-check2-circle me-2"></i>
+                                                Vue ile Doğrula & Gönder
+                                            </button>
+
+                                        </div>
+                                        <small class="text-muted mt-2 d-block">
+                                            <i class="bi bi-info-circle me-1"></i>
+                                            Her iki buton da formu doğrular; yöntemler farklıdır.
+                                        </small>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2026 Buğrahan AKIN — İbnü'l Vakt. Tüm hakları saklıdır.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="https://github.com/" target="_blank" class="text-white fs-5"><i class="bi bi-github"></i></a>
+                <a href="iletisim.html" class="text-white fs-5"><i class="bi bi-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Vue.js 3 CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- Native JS validasyon -->
+    <script src="js/validation.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Form gönderim sonucu bildirimi -->
+    <script>
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var durum = params.get('durum');
+            if (!durum) return;
+
+            var mesaj = durum === 'basarili'
+                ? '<i class="bi bi-check-circle-fill me-2"></i>Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağım.'
+                : '<i class="bi bi-exclamation-triangle-fill me-2"></i>Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyiniz.';
+            var tip = durum === 'basarili' ? 'success' : 'danger';
+
+            var banner = document.createElement('div');
+            banner.className = 'alert alert-' + tip + ' alert-dismissible fade show m-0 rounded-0';
+            banner.setAttribute('role', 'alert');
+            banner.innerHTML = mesaj + '<button type="button" class="btn-close" data-bs-dismiss="alert"></button>';
+
+            // Navbar'ın hemen altına ekle
+            var nav = document.querySelector('nav');
+            if (nav && nav.nextSibling) {
+                nav.parentNode.insertBefore(banner, nav.nextSibling);
+            } else {
+                document.body.prepend(banner);
+            }
+
+            // URL'den query param'ı temizle
+            history.replaceState(null, '', window.location.pathname);
+
+            // 6 saniye sonra kapat
+            setTimeout(function () {
+                var bsAlert = bootstrap.Alert.getOrCreateInstance(banner);
+                bsAlert.close();
+            }, 6000);
+        })();
+    </script>
+
+    <!-- VUE.JS UYGULAMASI -->
+    <script>
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    form: {
+                        ad: '',
+                        soyad: '',
+                        email: '',
+                        telefon: '',
+                        konu: '',
+                        bulusYolu: '',
+                        iletisimTercihi: '',
+                        ilgiAlanlari: [],
+                        yas: 22,
+                        mesaj: '',
+                        kvkk: false
+                    },
+                    vueHatalar: {},
+                    vueMesaj: { text: '', tip: '' }
+                };
+            },
+            methods: {
+                emailGecerliMi(email) {
+                    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+                },
+                telefonGecerliMi(tel) {
+                    return /^[0-9]{10,11}$/.test(tel.replace(/[\s\-]/g, ''));
+                },
+                vueIleDogrula() {
+                    // Native JS hatalarını temizle
+                    document.querySelectorAll('.form-control, .form-select').forEach(el => {
+                        el.classList.remove('is-invalid', 'is-valid');
+                    });
+
+                    this.vueHatalar = {};
+                    this.vueMesaj = { text: '', tip: '' };
+                    let gecerli = true;
+
+                    // Ad
+                    if (!this.form.ad.trim()) {
+                        this.vueHatalar.ad = '⚠ Ad alanı boş bırakılamaz.';
+                        gecerli = false;
+                    } else if (this.form.ad.trim().length < 2) {
+                        this.vueHatalar.ad = '⚠ Ad en az 2 karakter olmalıdır.';
+                        gecerli = false;
+                    }
+
+                    // Soyad
+                    if (!this.form.soyad.trim()) {
+                        this.vueHatalar.soyad = '⚠ Soyad alanı boş bırakılamaz.';
+                        gecerli = false;
+                    } else if (this.form.soyad.trim().length < 2) {
+                        this.vueHatalar.soyad = '⚠ Soyad en az 2 karakter olmalıdır.';
+                        gecerli = false;
+                    }
+
+                    // E-posta
+                    if (!this.form.email.trim()) {
+                        this.vueHatalar.email = '⚠ E-posta alanı boş bırakılamaz.';
+                        gecerli = false;
+                    } else if (!this.emailGecerliMi(this.form.email)) {
+                        this.vueHatalar.email = '⚠ Geçerli bir e-posta giriniz. (örn: ad@mail.com)';
+                        gecerli = false;
+                    }
+
+                    // Telefon
+                    if (!this.form.telefon.trim()) {
+                        this.vueHatalar.telefon = '⚠ Telefon alanı boş bırakılamaz.';
+                        gecerli = false;
+                    } else if (!this.telefonGecerliMi(this.form.telefon)) {
+                        this.vueHatalar.telefon = '⚠ Telefon sadece rakamlardan oluşmalı (10-11 hane).';
+                        gecerli = false;
+                    }
+
+                    // Konu
+                    if (!this.form.konu) {
+                        this.vueHatalar.konu = '⚠ Lütfen bir konu seçiniz.';
+                        gecerli = false;
+                    }
+
+                    // İletişim tercihi
+                    if (!this.form.iletisimTercihi) {
+                        this.vueHatalar.iletisimTercihi = '⚠ Lütfen iletişim tercihi seçiniz.';
+                        gecerli = false;
+                    }
+
+                    // İlgi alanları
+                    if (this.form.ilgiAlanlari.length === 0) {
+                        this.vueHatalar.ilgiAlanlari = '⚠ En az bir ilgi alanı seçmelisiniz.';
+                        gecerli = false;
+                    }
+
+                    // Mesaj
+                    if (!this.form.mesaj.trim()) {
+                        this.vueHatalar.mesaj = '⚠ Mesaj alanı boş bırakılamaz.';
+                        gecerli = false;
+                    } else if (this.form.mesaj.trim().length < 10) {
+                        this.vueHatalar.mesaj = '⚠ Mesaj en az 10 karakter olmalıdır.';
+                        gecerli = false;
+                    }
+
+                    // KVKK
+                    if (!this.form.kvkk) {
+                        this.vueHatalar.kvkk = '⚠ KVKK metnini kabul etmeniz gerekmektedir.';
+                        gecerli = false;
+                    }
+
+                    if (gecerli) {
+                        document.getElementById('iletisimForm').submit();
+                    } else {
+                        this.vueMesaj = {
+                            text: 'Lütfen kırmızı işaretli alanları düzeltin.',
+                            tip: 'hata'
+                        };
+                        window.scrollTo({ top: 400, behavior: 'smooth' });
+                    }
+                }
+            }
+        }).mount('#iletisimApp');
+    </script>
+
+</body>
+
+</html>
