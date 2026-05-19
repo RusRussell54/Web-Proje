@@ -1,0 +1,406 @@
+/* ================================================
+   GENEL AYARLAR
+================================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #0d6efd;
+  --dark-color: #212529;
+  --light-bg: #f8f9fa;
+  --transition: all 0.3s ease;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* ================================================
+   NAVBAR — Responsive ayar (Bootstrap'i destekler)
+================================================ */
+.navbar {
+  padding: 12px 0;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-brand {
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 8px 16px !important;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Küçük ekranlarda nav padding */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    padding: 16px 0;
+  }
+  .nav-link {
+    padding: 10px 8px !important;
+  }
+}
+
+/* ================================================
+   HERO SECTION — Responsive
+================================================ */
+.hero-section {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 50%, #084298 100%);
+  padding-top: 80px;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .hero-section {
+    min-height: 80vh;
+    padding: 100px 20px 60px;
+  }
+}
+
+/* Mobil */
+@media (max-width: 575.98px) {
+  .hero-section {
+    min-height: 70vh;
+    padding: 90px 16px 50px;
+  }
+  .hero-section h1 {
+    font-size: 2rem !important;
+  }
+  .hero-section p.lead {
+    font-size: 1rem !important;
+  }
+}
+
+/* ================================================
+   PROFİL FOTOĞRAFI
+================================================ */
+.profil-foto {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+}
+
+.profil-foto:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 575.98px) {
+  .profil-foto {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+/* ================================================
+   PAGE HEADER (CV, Şehrim vb. sayfa başlıkları)
+================================================ */
+.page-header {
+  min-height: 250px;
+  background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+  margin-top: 66px;
+  padding: 40px 20px;
+}
+
+@media (max-width: 575.98px) {
+  .page-header {
+    min-height: 180px;
+  }
+  .page-header h1 {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* ================================================
+   SECTION TITLE
+================================================ */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 16px;
+  margin-bottom: 40px;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--primary-color);
+  border-radius: 2px;
+}
+
+@media (max-width: 575.98px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ================================================
+   HOBİ KARTLARI
+================================================ */
+.hobi-kart {
+  transition: var(--transition);
+  border: 1px solid #e9ecef;
+}
+
+.hobi-kart:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary-color);
+}
+
+/* ================================================
+   CARD HOVER (Genel kart efekti)
+================================================ */
+.card-hover {
+  transition: var(--transition);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* ================================================
+   CV SAYFASI
+================================================ */
+.cv-kart {
+  transition: var(--transition);
+}
+
+.zaman-satiri {
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid var(--primary-color);
+}
+
+.zaman-satiri::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 6px;
+  width: 13px;
+  height: 13px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* ================================================
+   SLIDER
+================================================ */
+.slider-img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.slider-thumb {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: var(--transition);
+  height: 70px;
+  object-fit: cover;
+}
+
+.slider-thumb:hover,
+.slider-thumb.active {
+  opacity: 1;
+  border: 3px solid var(--primary-color);
+}
+
+/* Tablet ve mobilde slider yüksekliği */
+@media (max-width: 991.98px) {
+  .slider-img {
+    height: 350px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .slider-img {
+    height: 220px;
+  }
+  #sliderThumbs {
+    display: none; /* Mobilde thumbnail gizle */
+  }
+}
+
+/* ================================================
+   ŞEHİR İSTATİSTİK KARTLARI
+================================================ */
+.istatistik-kart {
+  transition: var(--transition);
+}
+
+.istatistik-kart:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow) !important;
+}
+
+/* ================================================
+   BİLGİ KUTUSU (Miras sayfası)
+================================================ */
+.bilgi-kutu {
+  transition: var(--transition);
+  border: 1px solid #e9ecef;
+}
+
+.bilgi-kutu:hover {
+  border-color: var(--primary-color);
+  background-color: #e7f1ff !important;
+}
+
+/* ================================================
+   DİZİ KARTI (API sayfası)
+================================================ */
+.dizi-kart {
+  transition: var(--transition);
+}
+
+.dizi-kart:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ================================================
+   İLETİŞİM SAYFASI
+================================================ */
+.iletisim-ikon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================================================
+   LOGIN SAYFASI — Responsive
+================================================ */
+.login-bg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-kart {
+  width: 100%;
+  max-width: 420px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 575.98px) {
+  .login-kart {
+    max-width: 100%;
+  }
+}
+
+/* ================================================
+   FORM KONTROLLER
+================================================ */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+.form-control.is-invalid,
+.form-select.is-invalid {
+  border-color: #dc3545;
+}
+
+/* ================================================
+   PROGRESS BAR ANİMASYON (CV sayfası)
+================================================ */
+.progress-bar {
+  animation: progressAnim 1.5s ease-in-out;
+}
+
+@keyframes progressAnim {
+  from {
+    width: 0%;
+  }
+}
+
+/* ================================================
+   FOOTER
+================================================ */
+footer {
+  padding: 30px 0;
+}
+
+footer a {
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--primary-color) !important;
+  transform: translateY(-2px);
+}
+
+/* ================================================
+   RESPONSIVE YARDIMCI SINIFLAR
+================================================ */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Mobilde tablo scroll */
+@media (max-width: 575.98px) {
+  .table-responsive-wrapper {
+    overflow-x: auto;
+  }
+}
+
+/* ================================================
+   SCROLL ANIMASYONU
+================================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
