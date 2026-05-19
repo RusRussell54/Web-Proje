@@ -22,7 +22,7 @@ Bu proje, kişisel bir web sitesi geliştirme ödevi kapsamında hazırlanmışt
 | 📬 İletişim | [iletisim.html](iletisim.html) |
 | ⭐ İlgi Alanlarım | [ilgi-alanlarim.html](ilgi-alanlarim.html) |
 | 🏙️ Şehrim | [sehrim.html](sehrim.html) |
-| 🎭 Kültürümüz | [kulturumuz.html](kulturumuz.html) |
+| 🎭 Mirasimiz | [mirasimiz.html]mirasimiz.html) |
 | 🔐 Giriş | [login.html](login.html) |
 
 ---
