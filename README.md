@@ -8,8 +8,8 @@ Bu proje, kişisel bir web sitesi geliştirme ödevi kapsamında hazırlanmışt
 
 | Belge | Açıklama |
 |-------|----------|
-| [📋 Ödev Yönergesi](docs/odev-yonergesi.pdf) | Proje gereksinimlerini içeren ödev yönergesi |
-| [📝 Ödev Raporu](docs/odev-raporu.docx) | Projenin gelişim sürecini anlatan rapor |
+| [📋 Ödev Yönergesi](docs/2025-2026%20Bahar%20Dönemi%20Web%20Programlama%20Ödevi.pdf) | Proje gereksinimlerini içeren ödev yönergesi |
+| [📝 Ödev Raporu](docs/Web_Proje_Rapor.docx) | Projenin gelişim sürecini anlatan rapor |
 
 ---
 
@@ -22,7 +22,7 @@ Bu proje, kişisel bir web sitesi geliştirme ödevi kapsamında hazırlanmışt
 | 📬 İletişim | [iletisim.html](iletisim.html) |
 | ⭐ İlgi Alanlarım | [ilgi-alanlarim.html](ilgi-alanlarim.html) |
 | 🏙️ Şehrim | [sehrim.html](sehrim.html) |
-| 🎭 Mirasimiz | [mirasimiz.html]mirasimiz.html) |
+| 🎭 Mirasimiz | [mirasimiz.html](mirasimiz.html) |
 | 🔐 Giriş | [login.html](login.html) |
 
 ---
